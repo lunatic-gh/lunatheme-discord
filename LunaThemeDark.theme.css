@@ -1,0 +1,91 @@
+/**
+* @name Lunatic
+* @version 1.0
+* @description Dark Variant of my own Discord-Theme.
+*/
+
+:root {
+    --titlebar-bg-color: rgb(10, 10, 10);
+    --sidebar-bg-color: rgb(20, 20, 20);
+    --sidebar-folder-bg-color: rgb(40, 40, 40);
+    --friends-list-bg-color: rgba(30, 30, 30);
+    --friends-list-right-bg-color: var(--friends-list-bg-color);
+    --user-area-bg-color: var(--friends-list-bg-color);
+    --chat-bg-color: rgba(40, 40, 40);
+    --chat-message-input-color: rgba(50, 50, 50);
+    --text-field-bg-color: rgba(50, 50, 50);
+}
+
+/**
+*
+* Everything below should not be edited, unless you are an expert and know how css works.
+*
+*/
+
+/* Title Bar (Remove the bar's 4px top-margin, restoring the drag-region on the first 4 pixels of the window-top) */
+.theme-dark .withFrame__5e49e {
+    margin-top: 0px;
+    height: 22px;
+    background: var(--titlebar-bg-color);
+}
+
+/* Title Bar Buttons (Move em down 4px to account for the above fix) */
+.theme-dark .winButton_f17fb6 {
+    top: 0px;
+}
+
+/* Sidebar Background */
+.theme-dark .guilds__2b93a {
+    background: var(--sidebar-bg-color);
+}
+
+/* Sidebar Folder Background*/
+.theme-dark .expandedFolderBackground_b1385f {
+    background: var(--sidebar-folder-bg-color);
+}
+
+/* Friends-List */
+.theme-dark .searchBar__621ec,
+.theme-dark .scroller__89969 {
+    background: var(--friends-list-bg-color);
+}
+
+/* Friends-List (Right Side) */
+.theme-dark .container__26baa,
+.peopleColumn__0c784 {
+    background: var(--friends-list-right-bg-color);
+}
+
+.inner__999f6 {
+    background: var(--text-field-bg-color);
+}
+
+/* "Find or start a conversation" input field */
+.theme-dark .searchBar__621ec .searchBarComponent__8f95f {
+    background: var(--text-field-bg-color);
+}
+
+/* User-Area */
+.theme-dark .container_debb33 {
+    background: var(--user-area-bg-color);
+}
+
+.theme-dark .children_cde9af::before,
+.theme-dark .children_cde9af:after {
+    display: none;
+}
+
+/* Chat Background (Affects both DM's and Server-Channels) */
+.theme-dark .chatContent_f087cb {
+    background: var(--chat-bg-color);
+}
+
+.theme-dark .form_d8a4a1:before,
+.theme-dark .form_d8a4a1:after {
+    display: none;
+}
+
+/* Chat Message Input Field */
+.theme-dark .themedBackground__3a4c0 {
+    background: var(--chat-message-input-color);
+}
