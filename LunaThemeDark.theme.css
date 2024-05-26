@@ -14,6 +14,8 @@
     --chat-bg-color: rgba(40, 40, 40);
     --chat-message-input-color: rgba(50, 50, 50);
     --text-field-bg-color: rgba(50, 50, 50);
+    --settings-sidebar-bg-color: rgba(20, 20, 20);
+    --settings-content-area-bg-color: rgba(20, 20, 20);
 }
 
 /**
@@ -88,4 +90,33 @@
 /* Chat Message Input Field */
 .theme-dark .themedBackground__3a4c0 {
     background: var(--chat-message-input-color);
+}
+
+/* Settings Sidebar */
+.sidebarRegion__36437 {
+    flex: none;
+}
+
+.sidebar__02e8d {
+    padding-top: 20px;
+}
+
+.sidebarRegionScroller__8113e {
+    background: var(--settings-sidebar-bg-color);
+}
+
+/* Settings Page Elements */
+.contentColumn__5f80b {
+    min-width: 95%;
+    max-width: 95%;
+}
+
+.contentRegionShownSidebar__9d1b9 {
+    background: var(--settings-content-area-bg-color);
+}
+
+/* Profile Preview-Window */
+.accountProfileCard__744d8 {
+    /* Everything above 660px will appear very buggy. IDK enough about css to fix it. */
+    max-width: 660px;
 }
