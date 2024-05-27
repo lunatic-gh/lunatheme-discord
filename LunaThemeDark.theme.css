@@ -1,5 +1,5 @@
 /**
-* @name Lunatic
+* @name LunaTheme Dark
 * @version 1.0
 * @description Dark Variant of my own Discord-Theme.
 */
@@ -69,6 +69,10 @@
 
 /* User-Area */
 .theme-dark .container_debb33 {
+    background: var(--user-area-bg-color);
+}
+
+.container__3673d {
     background: var(--user-area-bg-color);
 }
 
