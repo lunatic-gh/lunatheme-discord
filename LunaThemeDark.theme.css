@@ -9,6 +9,7 @@
     --sidebar-bg-color: rgb(20, 20, 20);
     --sidebar-folder-bg-color: rgb(40, 40, 40);
     --friends-list-bg-color: rgba(30, 30, 30);
+    --server-channel-list-bg-color: rgba(30, 30, 30);
     --friends-list-right-bg-color: var(--friends-list-bg-color);
     --user-area-bg-color: var(--friends-list-bg-color);
     --chat-bg-color: rgba(40, 40, 40);
@@ -16,6 +17,7 @@
     --text-field-bg-color: rgba(50, 50, 50);
     --settings-sidebar-bg-color: rgba(20, 20, 20);
     --settings-content-area-bg-color: rgba(20, 20, 20);
+    --server-member-list-bg-color: rgba(30, 30, 30);
 }
 
 /**
@@ -54,11 +56,15 @@
 
 /* Friends-List (Right Side) */
 .theme-dark .container__26baa,
-.peopleColumn__0c784 {
+.theme-dark .peopleColumn__0c784,
+.theme-dark .emptyCard__204d9,
+.theme-dark .wrapper__3c6d5,
+.theme-dark .section__253ec {
     background: var(--friends-list-right-bg-color);
+    border: none;
 }
 
-.inner__999f6 {
+.theme-dark .inner__999f6 {
     background: var(--text-field-bg-color);
 }
 
@@ -72,7 +78,7 @@
     background: var(--user-area-bg-color);
 }
 
-.container__3673d {
+.theme-dark .container__3673d {
     background: var(--user-area-bg-color);
 }
 
@@ -82,7 +88,9 @@
 }
 
 /* Chat Background (Affects both DM's and Server-Channels) */
-.theme-dark .chatContent_f087cb {
+.theme-dark .chatContent_f087cb,
+.theme-dark .wrapper_c899da,
+.theme-dark .wrapper__6b7d8 {
     background: var(--chat-bg-color);
 }
 
@@ -97,30 +105,41 @@
 }
 
 /* Settings Sidebar */
-.sidebarRegion__36437 {
+.theme-dark .sidebarRegion__36437 {
     flex: none;
 }
 
-.sidebar__02e8d {
+.theme-dark .sidebar__02e8d {
     padding-top: 20px;
 }
 
-.sidebarRegionScroller__8113e {
+.theme-dark .sidebarRegionScroller__8113e {
     background: var(--settings-sidebar-bg-color);
 }
 
 /* Settings Page Elements */
-.contentColumn__5f80b {
+.theme-dark .contentColumn__5f80b {
     min-width: 95%;
     max-width: 95%;
 }
 
-.contentRegionShownSidebar__9d1b9 {
+.theme-dark .contentRegionShownSidebar__9d1b9 {
     background: var(--settings-content-area-bg-color);
 }
 
 /* Profile Preview-Window */
-.accountProfileCard__744d8 {
+.theme-dark .accountProfileCard__744d8 {
     /* Everything above 660px will appear very buggy. IDK enough about css to fix it. */
     max-width: 660px;
+}
+
+/* Channel-Sidebar */
+.theme-dark .container__7e23c,
+.theme-dark .animatedContainer__0e828 {
+    background: var(--server-channel-list-bg-color);
+}
+
+.theme-dark .members__573eb,
+.theme-dark .member_b44d5d {
+    background: var(--server-member-list-bg-color);
 }
