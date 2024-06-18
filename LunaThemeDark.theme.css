@@ -5,141 +5,134 @@
 */
 
 :root {
-    --titlebar-bg-color: rgb(10, 10, 10);
-    --sidebar-bg-color: rgb(20, 20, 20);
-    --sidebar-folder-bg-color: rgb(40, 40, 40);
-    --friends-list-bg-color: rgba(30, 30, 30);
-    --server-channel-list-bg-color: rgba(30, 30, 30);
-    --friends-list-right-bg-color: var(--friends-list-bg-color);
-    --user-area-bg-color: var(--friends-list-bg-color);
-    --chat-bg-color: rgba(40, 40, 40);
-    --chat-message-input-color: rgba(50, 50, 50);
-    --text-field-bg-color: rgba(50, 50, 50);
-    --settings-sidebar-bg-color: rgba(20, 20, 20);
-    --settings-content-area-bg-color: rgba(20, 20, 20);
-    --server-member-list-bg-color: rgba(30, 30, 30);
+    --dark-color-bg-titlebar: rgb(0, 0,0);
+    --dark-color-bg-servers-sidebar: rgb(10, 10, 10);
+    --dark-color-bg-servers-sidebar-generic-icon: rgb(30, 30, 30);
+    --dark-color-bg-primary: rgb(30, 30, 30);
+    --dark-color-bg-input: rgb(40, 40, 40);
+    --dark-color-bg-chat: var(--dark-color-bg-primary);
+    --dark-color-accent: rgb(255, 0, 120);
 }
 
-/**
-*
-* Everything below should not be edited, unless you are an expert and know how css works.
-*
-*/
-
-/* Title Bar (Remove the bar's 4px top-margin, restoring the drag-region on the first 4 pixels of the window-top) */
-.theme-dark .withFrame__5e49e {
+.theme-dark #app-mount > div.typeWindows_e41dab.withFrame__5e49e.titleBar__710b0.withBackgroundOverride_f510cb {
     margin-top: 0px;
-    height: 22px;
-    background: var(--titlebar-bg-color);
+    height: 30px;
+    background-color: var(--dark-color-bg-titlebar);
 }
 
-/* Title Bar Buttons (Move em down 4px to account for the above fix) */
-.theme-dark .winButton_f17fb6 {
-    top: 0px;
+.theme-dark .withFrame__5e49e > .winButton_f17fb6,
+.theme-dark .wordmarkWindows_ffbc5e {
+    margin-top: 4px;
+    width: 45px;
+    height: 30px;
 }
 
-/* Sidebar Background */
-.theme-dark .guilds__2b93a {
-    background: var(--sidebar-bg-color);
+.theme-dark .wrapper__216eb,
+.theme-dark .expandedFolderBackground_b1385f,
+.theme-dark .folder__17546 {
+    background-color: var(--dark-color-bg-servers-sidebar);
 }
 
-/* Sidebar Folder Background*/
-.theme-dark .expandedFolderBackground_b1385f {
-    background: var(--sidebar-folder-bg-color);
+.theme-dark .circleIconButton__05cf2,
+.theme-dark .childWrapperNoHoverBg_bc176a {
+    background-color: var(--dark-color-bg-servers-sidebar-generic-icon);
 }
 
-/* Friends-List */
-.theme-dark .searchBar__621ec,
-.theme-dark .scroller__89969 {
-    background: var(--friends-list-bg-color);
+.theme-dark .sidebar_e031be,
+.theme-dark .privateChannels__9b518,
+.theme-dark .scroller__89969,
+.theme-dark .container_debb33,
+.theme-dark .themed_b152d4,
+.theme-dark .container_bd15da,
+.theme-dark .container__7e23c,
+.theme-dark .container__3673d,
+.theme-dark .searchResultsWrap__2e184 {
+    background-color: var(--dark-color-bg-primary);
 }
 
-/* Friends-List (Right Side) */
-.theme-dark .container__26baa,
-.theme-dark .peopleColumn__0c784,
-.theme-dark .emptyCard__204d9,
-.theme-dark .wrapper__3c6d5,
-.theme-dark .section__253ec {
-    background: var(--friends-list-right-bg-color);
-    border: none;
+.theme-dark .searchBar__310d8,
+.theme-dark .searchBar__621ec .searchBarComponent__8f95f,
+.theme-dark .searchBar__5a20a,
+.theme-dark .themedBackground__3a4c0,
+.input__2a648 {
+    background-color: var(--dark-color-bg-input);
 }
 
-.theme-dark .inner__999f6 {
-    background: var(--text-field-bg-color);
-}
-
-/* "Find or start a conversation" input field */
-.theme-dark .searchBar__621ec .searchBarComponent__8f95f {
-    background: var(--text-field-bg-color);
-}
-
-/* User-Area */
-.theme-dark .container_debb33 {
-    background: var(--user-area-bg-color);
-}
-
-.theme-dark .container__3673d {
-    background: var(--user-area-bg-color);
-}
-
-.theme-dark .children_cde9af::before,
-.theme-dark .children_cde9af:after {
-    display: none;
-}
-
-/* Chat Background (Affects both DM's and Server-Channels) */
 .theme-dark .chatContent_f087cb,
-.theme-dark .wrapper_c899da,
+.theme-dark .wrapper_c899da ,
 .theme-dark .wrapper__6b7d8 {
-    background: var(--chat-bg-color);
+    background-color: var(--dark-color-bg-chat);
 }
 
 .theme-dark .form_d8a4a1:before,
-.theme-dark .form_d8a4a1:after {
+.theme-dark .children_cde9af:after {
+    background: transparent;
+}
+
+.theme-dark .tabBody_a90ea8:before {
     display: none;
 }
 
-/* Chat Message Input Field */
-.theme-dark .themedBackground__3a4c0 {
-    background: var(--chat-message-input-color);
-}
-
-/* Settings Sidebar */
-.theme-dark .sidebarRegion__36437 {
-    flex: none;
-}
-
-.theme-dark .sidebar__02e8d {
-    padding-top: 20px;
-}
-
-.theme-dark .sidebarRegionScroller__8113e {
-    background: var(--settings-sidebar-bg-color);
-}
-
-/* Settings Page Elements */
-.theme-dark .contentColumn__5f80b {
-    min-width: 95%;
-    max-width: 95%;
-}
-
-.theme-dark .contentRegionShownSidebar__9d1b9 {
-    background: var(--settings-content-area-bg-color);
-}
-
-/* Profile Preview-Window */
-.theme-dark .accountProfileCard__744d8 {
-    /* Everything above 660px will appear very buggy. IDK enough about css to fix it. */
-    max-width: 660px;
-}
-
-/* Channel-Sidebar */
-.theme-dark .container__7e23c,
-.theme-dark .animatedContainer__0e828 {
-    background: var(--server-channel-list-bg-color);
-}
-
 .theme-dark .members__573eb,
-.theme-dark .member_b44d5d {
-    background: var(--server-member-list-bg-color);
+.theme-dark .member_b44d5d,
+.theme-dark .wrapper__3c6d5,
+.theme-dark .section__253ec {
+    background-color: var(--dark-color-bg-primary);
 }
+
+.theme-dark .outer_a41cf3.interactive__46c44:hover,
+.theme-dark .outer_a41cf3.interactive__46c44:hover > div > div > .section__253ec {
+    background-color: var(--primary-800);
+}
+
+.theme-dark .itemCard_b64118 {
+    border-radius: 12px;
+    border-width: 2px;
+    border-color: var(--dark-color-accent);
+}
+
+.theme-dark .scroller__7c25e {
+    border: none;
+}
+
+.theme-dark .menu__088f7 {
+    border-radius: 12px;
+}
+
+.theme-dark .quickswitcher_b5bb0a {
+    border: 2px solid var(--dark-color-accent); /* Added pink border */
+    border-radius: 12px;
+    background-color: var(--dark-color-bg-primary);
+}
+
+.theme-dark .scroller_d4b86c {
+    background-color: var(--dark-color-bg-primary);
+}
+
+.theme-dark .activity__47d03 {
+    background: var(--profile-gradient-overlay-color);
+}
+
+.theme-dark .userProfileInnerThemedNonPremium_b64fb4 ,
+.theme-dark .fullSizeOverlayBackground_a28b53{
+    background: var(--profile-body-background-color);
+}
+
+.theme-dark .search__07df0 {
+    order: 1;
+    min-width: 300px;
+    border: 1px solid var(--dark-color-accent);
+    border-radius: 8px;
+}
+
+.theme-dark .searchBar__5a20a,
+.theme-dark .open_d3ab4e .searchBar__5a20a {
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.theme-dark .inset__61d5b {
+    background-color: var(--primary-800);    
+}
+
